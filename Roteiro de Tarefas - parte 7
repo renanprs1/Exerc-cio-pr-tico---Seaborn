@@ -1,0 +1,15 @@
+variaveis = ['tempo_uso_horas', 'bugs_reportados', 'satisfacao']
+
+g = sns.pairplot(
+    df_sistema,
+    vars=variaveis,
+    hue='plano',
+    palette='muted',
+    diag_kind='kde',
+    plot_kws={'alpha': 0.6, 's': 40},
+    corner=False
+)
+
+g.fig.suptitle('Pairplot: Tempo de Uso, Bugs Reportados e Satisfação (por Plano)', 
+               y=1.02, fontsize=14)
+plt.show()
