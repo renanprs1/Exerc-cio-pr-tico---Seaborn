@@ -1,0 +1,9 @@
+plt.figure(figsize=(8, 5))
+
+sns.violinplot(data=df_sistema, x='plano', y='satisfacao', palette='muted', inner='quartile')
+
+plt.title('Distribuição da Satisfação por Tipo de Plano', fontsize=14)
+plt.xlabel('Plano de Assinatura', fontsize=12)
+plt.ylabel('Nota de Satisfação (1-10)', fontsize=12)
+plt.tight_layout()
+plt.show()
