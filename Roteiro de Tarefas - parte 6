@@ -1,0 +1,24 @@
+# Seleciona apenas variáveis numéricas
+numericas = df_sistema.select_dtypes(include=[np.number])
+
+# Calcula a matriz de correlação de Pearson
+corr = numericas.corr(method='pearson')
+
+plt.figure(figsize=(8, 6))
+
+sns.heatmap(
+    corr,
+    annot=True,
+    fmt='.2f',
+    cmap='coolwarm',
+    center=0,
+    vmin=-1,
+    vmax=1,
+    square=True,
+    linewidths=0.5,
+    cbar_kws={'shrink': 0.8}
+)
+
+plt.title('Matriz de Correlação de Pearson', fontsize=14)
+plt.tight_layout()
+plt.show()
