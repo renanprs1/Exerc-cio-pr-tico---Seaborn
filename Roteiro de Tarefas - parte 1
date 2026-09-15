@@ -1,0 +1,10 @@
+plt.figure(figsize=(8, 5))
+ordem = df_sistema['plano'].value_counts().index  # ordena pela frequência
+
+sns.countplot(data=df_sistema, x='plano', order=ordem, palette='muted')
+
+plt.title('Contagem de Usuários por Tipo de Plano', fontsize=14)
+plt.xlabel('Plano de Assinatura', fontsize=12)
+plt.ylabel('Número de Usuários', fontsize=12)
+plt.tight_layout()
+plt.show()
