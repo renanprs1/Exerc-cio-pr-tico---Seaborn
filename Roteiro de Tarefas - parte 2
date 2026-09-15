@@ -1,0 +1,9 @@
+plt.figure(figsize=(8, 5))
+
+sns.histplot(data=df_sistema, x='idade', bins=20, kde=True, color='steelblue')
+
+plt.title('Distribuição da Idade dos Usuários', fontsize=14)
+plt.xlabel('Idade (anos)', fontsize=12)
+plt.ylabel('Frequência', fontsize=12)
+plt.tight_layout()
+plt.show()
