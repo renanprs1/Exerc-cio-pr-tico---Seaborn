@@ -1,0 +1,19 @@
+plt.figure(figsize=(10, 6))
+
+sns.scatterplot(
+    data=df_sistema,
+    x='tempo_uso_horas',
+    y='satisfacao',
+    hue='plano',
+    size='bugs_reportados',
+    sizes=(20, 200),
+    alpha=0.7,
+    palette='muted'
+)
+
+plt.title('Tempo de Uso vs Satisfação (por Plano e Bugs Reportados)', fontsize=14)
+plt.xlabel('Tempo de Uso (horas)', fontsize=12)
+plt.ylabel('Satisfação (1-10)', fontsize=12)
+plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left')
+plt.tight_layout()
+plt.show()
